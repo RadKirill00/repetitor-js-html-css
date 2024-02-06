@@ -1,15 +1,14 @@
-let p = document.querySelector("#elem1");
-let p2 = document.querySelector("#elem2");
-let p3 = document.querySelector("#elem3");
-let p4 = document.querySelector("#elem4");
-let p5 = document.querySelector("#elem5");
+let p = document.querySelector("#elem");
+let btn = document.querySelector("#button");
+let btn2 = document.querySelector("#button2");
 
-function func() {
-  console.log("message");
+function func1() {
+  p.textContent = Number(p.textContent) + 1
 }
 
-p.addEventListener("click", func);
-p2.addEventListener("click", func);
-p3.addEventListener("click", func);
-p4.addEventListener("click", func);
-p5.addEventListener("click", func);
+function func2() {
+  p.textContent = Number(p.textContent) - 1;
+}
+
+btn.addEventListener("click", func1);
+btn2.addEventListener('click', func2)
