@@ -1,12 +1,7 @@
-let elems = document.querySelectorAll("ul li");
+let btn = document.querySelector('.btn')
+let elem = document.querySelector(".elem");
 
-for (let elem of elems) {
-  elem.addEventListener('click', function func() {
-    if (this.textContent < 10) {
-      this.textContent = Number(this.textContent) + 1;
-    } else {
-      this.removeEventListener("click", func);
-    }
-  })
-}
+btn.addEventListener("mouseenter", function () {
+  elem.classList.toggle("active");
+});
 
